@@ -5,4 +5,22 @@ $ ->
   f = ->
     username = $('#username').text().trim()
     alert 'Hello, %s'.replace('%s', username)
-  setTimeout f, 20000
+  setTimeout f, 200000
+
+  submit = $('#submit')
+  if submit.size() == 0
+    return
+
+  submit.click ->
+    body = $('#body')
+    name = $('#name')
+    if body.val().length > 14
+      alert 'too long'
+      return false
+    else if body.val().length == 0
+      alert 'must input some body'
+      return false
+    if name.val().length == 0
+      alert 'must input some name'
+      return false
+    return true
