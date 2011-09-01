@@ -2,5 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 $ ->
-  username = $('#username').text().trim()
-  alert 'Hello, %s'.replace('%s', username)
+  f = ->
+    username = $('#username').text().trim()
+    alert 'Hello, %s'.replace('%s', username)
+  setTimeout f, 20000
