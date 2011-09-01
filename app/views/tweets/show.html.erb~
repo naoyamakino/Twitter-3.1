@@ -7,7 +7,7 @@
 
 <p>
   <b>User:</b>
-  <%= @tweet.user %>
+  <%= @tweet.user.name %>
 </p>
 
 
